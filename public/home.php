@@ -7,7 +7,7 @@
     <title>Personal Trainer</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJQJi-LFymAdGSFpNZsMQ7nG0Di6agP3E&libraries=places"></script> <!-- Replace YOUR_API_KEY with your actual Google Maps API key -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=your_api_key"></script> <!-- Replace YOUR_API_KEY with your actual Google Maps API key -->
 </head>
 <body> 
     <header>
