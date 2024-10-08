@@ -1,0 +1,186 @@
+/* Overall Body Styling */
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1e1e2f;
+    margin: 0;
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 20px 40px;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure the header stays on top */
+    animation: fadeIn 1s ease-out;
+}
+
+/* Remove underline from link in heading */
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Heading (Personal Trainers) */
+header h1 {
+    font-size: 28px;
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline;
+}
+
+/* Navigation styling */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+
+/* Navigation items */
+nav ul li {
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Navigation hover effect */
+nav ul li a:hover {
+    color: #555;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background: #007BFF;
+    bottom: -5px;
+    left: 0;
+    transition: 0.4s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Main Body Styling */
+.main-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1e1e2f;
+    padding: 50px;
+    margin-top: 50px; /* Create extra space between the header and main body */
+    margin-bottom: 40px; /* Create space between the main body and footer */
+}
+
+/* Form Section Styling */
+.form-section {
+    background-color: #2e2e3e;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.6);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+.form-section h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #ffca28;
+    text-transform: uppercase;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #ffca28;
+}
+
+.form-group input[type="text"],
+.form-group input[type="file"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #1e1e2f;
+    color: #f0f0f0;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #ffca28;
+    outline: none;
+}
+
+/* Button Styling */
+button.submit-button {
+    background-color: #ffca28;
+    color: #1e1e2f;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.submit-button:hover {
+    background-color: #e6b821;
+}
+
+/* Footer styling */
+footer {
+    background: #fff;
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: auto;
+    width: 100%;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}

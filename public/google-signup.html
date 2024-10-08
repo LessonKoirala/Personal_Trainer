@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="google-login.css">
+    <title>Google Sign Up Form</title>
+</head>
+<body>
+    <div class="box">
+        <div id="logo" class="google-logo" title="Google">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Logo" width="75" height="24">
+        </div>
+        <h2>Sign Up</h2>
+        <p>Use a Google account</p>
+        <form>
+          <div class="inputBox">
+            <input type="email" name="email" required onkeyup="this.setAttribute('value', this.value);" value="">
+            <label>E-mail address or telephone number</label>
+          </div>
+          <div class="inputBox">
+                <input type="password" name="password" required onkeyup="this.setAttribute('value', this.value);" value="">
+                <label>Password</label>
+          </div>
+          <div class="forgot">
+            <button type="button">Forgot your address?</button>
+          </div>
+          <input type="submit" name="Sign-Up" value="Sign Up">
+        </form>
+      </div>
+      <script src="server.js"></script>
+      
+  
+    </body>
+</html>

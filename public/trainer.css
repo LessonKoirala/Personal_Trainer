@@ -1,0 +1,276 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+/* Container for header and navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Remove underline from link in heading */
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Heading (Personal Trainers) */
+header h1 {
+    font-size: 28px;
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline;
+}
+
+/* Navigation styling */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+
+/* Navigation items */
+nav ul li {
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+}
+
+/* Navigation items link styling */
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Navigation items hover effect */
+nav ul li a:hover {
+    color: #007BFF;
+}
+
+/* Fancy underline on hover */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background: #007BFF;
+    bottom: -5px;
+    left: 0;
+    transition: 0.4s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Adding a smooth entrance animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Main Body Styling */
+main {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3); /* Soft gradient background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px; /* Margin for spacing */
+    animation: fadeIn 0.8s ease-out; /* Smoother entrance animation */
+}
+
+/* Trainer list styling */
+.trainer-list {
+    width: 100%;
+    max-width: 1200px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 20px; /* More rounded corners */
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15); /* Increased shadow for emphasis */
+    animation: fadeIn 0.5s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+}
+
+.trainer-list:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2); /* More prominent shadow on hover */
+}
+
+/* Trainer container grid styling */
+#trainer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Responsive grid layout with adjusted size */
+    gap: 25px; /* Increased gap between items */
+    margin-top: 20px;
+    padding: 20px;
+}
+
+/* Trainer profile card styling */
+.trainer-item {
+    background: #fdfdfd; /* Softer white background */
+    border-radius: 15px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    position: relative; /* For badges and other overlays */
+}
+
+.trainer-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Trainer image styling */
+.trainer-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #007BFF; /* Add border to photo */
+    box-shadow: 0px 3px 15px rgba(0, 123, 255, 0.3); /* Subtle shadow */
+}
+
+/* Trainer details */
+.trainer-details {
+    width: 100%;
+    padding: 15px 0;
+    font-size: 16px;
+    color: #555;
+    background: #f0f4f8; /* Light background for details */
+    border-top: 1px solid #e0e6ed; /* Subtle top border */
+    margin-top: 15px;
+    text-align: left; /* Align text to the left */
+    padding: 20px;
+}
+
+/* Trainer details heading */
+.trainer-details h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Trainer details paragraphs */
+.trainer-details p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #777;
+    display: flex;
+    align-items: center; /* Center align text with icons */
+}
+
+/* Trainer details icons */
+.trainer-details p i {
+    margin-right: 8px; /* Space between icon and text */
+    color: #007BFF; /* Icon color */
+}
+
+/* Trainer bio */
+.trainer-details .bio {
+    margin: 15px 0;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* CV Link styling */
+.trainer-details a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.trainer-details a:hover {
+    text-decoration: underline;
+}
+
+/* Badge styling (optional) */
+.trainer-item .badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff4d4d;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0px 3px 10px rgba(255, 77, 77, 0.3);
+}
+
+
+/* Footer styling */
+footer {
+    background: #fff;
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: auto;
+    width: 100%;
+}
+
+/* Footer text styling */
+footer p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Social media links styling */
+.social-link {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.social-link:hover {
+    text-decoration: underline;
+}

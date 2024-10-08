@@ -1,0 +1,258 @@
+/* Apply the same reset and general styles as the login page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Updated Header Styling for Fixed Position */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 20px 40px;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: fixed; /* Make the header fixed */
+    top: 0; /* Ensure it's at the top of the page */
+    left: 0;
+    z-index: 1000; /* Ensure the header stays on top of other elements */
+}
+
+/* Add margin-top to the body to avoid content hiding under the fixed header */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+    margin-top: 120px; /* Adjust this to match the height of the header */
+}
+
+header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header h1 {
+    font-size: 28px;
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li {
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #555;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background: #007BFF;
+    bottom: -5px;
+    left: 0;
+    transition: 0.4s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a.active {
+    color: #007BFF;
+}
+
+nav ul li a.active::after {
+    background: #007BFF;
+    width: 100%;
+}
+
+/* Form Section */
+.form-section {
+    background: #fff;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.user-type {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.user-type label {
+    margin: 0 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.user-type input {
+    margin-right: 5px;
+}
+
+button[type="submit"],
+.social-signup button {
+    width: 100%;
+    padding: 10px;
+    background: #007BFF;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover,
+.social-signup button:hover {
+    background: #0056b3;
+}
+
+.social-signup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.social-signup button {
+    background: #db4437; /* Google's brand color */
+}
+
+.social-signup button#facebook-signup {
+    background: #3b5998; /* Facebook's brand color */
+}
+
+.form-section p {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.form-section p a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.form-section p a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #fff;
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: auto;
+    width: 100%;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+.social-link {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.social-link:hover {
+    text-decoration: underline;
+}
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainer Details - Personal Trainers</title>
+    <link rel="stylesheet" href="detail.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <a href="/index.html">
+            <h1>Personal Trainer</h1>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/trainer.html">Trainers</a></li>
+                <li><a href="/login.html">Login</a></li>
+                <li><a href="/signup.html">Signup</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <main class="main-body">
+        <section class="form-section">
+            <h2>Trainer Details</h2>
+            <form action="detail.php" method="POST" enctype="multipart/form-data">
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="trainer-name">Full Name</label>
+                    <input type="text" id="trainer-name" name="name" placeholder="Enter your full name" required>
+                </div>
+
+                <!-- Address - Street, Number, Postcode, and City -->
+                <div class="form-group">
+                    <label for="trainer-street">Street Name and Number</label>
+                    <input type="text" id="trainer-street" name="street" placeholder="e.g., 123 Main St" required>
+                </div>
+                <div class="form-group">
+                    <label for="trainer-postcode">Postcode</label>
+                    <input type="text" id="trainer-postcode" name="postcode" placeholder="Enter your postcode" required>
+                </div>
+                <div class="form-group">
+                    <label for="trainer-city">City</label>
+                    <input type="text" id="trainer-city" name="city" placeholder="Enter your city" required>
+                </div>
+
+                <!-- Specialization -->
+                <div class="form-group">
+                    <label for="trainer-specialization">Specialization</label>
+                    <input type="text" id="trainer-specialization" name="specialization" placeholder="Your expertise" required>
+                </div>
+
+                <!-- Biography -->
+                <div class="form-group">
+                    <label for="trainer-bio">Biography</label>
+                    <textarea id="trainer-bio" name="bio" rows="4" placeholder="Tell us about yourself" required></textarea>
+                </div>
+
+                <!-- Profile Picture -->
+                <div class="form-group">
+                    <label for="trainer-photo">Profile Picture</label>
+                    <input type="file" id="trainer-photo" name="photo" accept="image/*" required>
+                </div>
+
+                <!-- CV Attachment -->
+                <div class="form-group">
+                    <label for="trainer-cv">Upload CV</label>
+                    <input type="file" id="trainer-cv" name="cv" accept=".pdf,.doc,.docx" required>
+                </div>
+
+                <!-- Qualification Attachment -->
+                <div class="form-group">
+                    <label for="trainer-qualification">Upload Qualification</label>
+                    <input type="file" id="trainer-qualification" name="qualification" accept=".pdf,.jpg,.png,.doc,.docx" required>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Personal Trainers. All rights reserved.</p>
+        <p>Follow us on: 
+            <a href="#" class="social-link">Facebook</a> | 
+            <a href="#" class="social-link">Twitter</a> | 
+            <a href="#" class="social-link">Instagram</a>
+        </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="detail.js"></script>
+</body>
+</html>

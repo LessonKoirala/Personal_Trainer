@@ -1,0 +1,257 @@
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+/* Container for header and navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Remove underline from link in heading */
+header a {
+    text-decoration: none; /* Remove underline from the link */
+    color: inherit; /* Ensure the link inherits the color of the heading */
+}
+
+/* Heading (Personal Trainers) */
+header h1 {
+    font-size: 28px;
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline; /* Ensure it stays inline */
+}
+
+/* Navigation styling */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+}
+
+/* Navigation items */
+nav ul li {
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+}
+
+/* Navigation items link styling */
+nav ul li a {
+    color: #333; /* Set the text color to black */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease;
+}
+
+/* Navigation items hover effect */
+nav ul li a:hover {
+    color: #555; /* Slightly lighter black on hover */
+}
+
+/* Fancy underline on hover */
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background: #007BFF; /* Underline color */
+    bottom: -5px;
+    left: 0;
+    transition: 0.4s ease;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Adding a smooth entrance animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Form Section Styling */
+
+
+.form-section {
+    background: #fff;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.user-type {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.user-type label {
+    margin: 0 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.user-type input {
+    margin-right: 5px;
+}
+
+button[type="submit"],
+.social-login button {
+    width: 100%;
+    padding: 10px;
+    background: #007BFF;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover,
+.social-login button:hover {
+    background: #0056b3;
+}
+
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.social-login button {
+    background: #db4437; /* Google's brand color */
+}
+
+.social-login button#facebook-login,
+.social-login button#facebook-signup {
+    background: #3b5998; /* Facebook's brand color */
+}
+
+.form-section p {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.form-section p a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.form-section p a:hover {
+    text-decoration: underline;
+}
+
+/* Active Navigation Link Styling */
+nav ul li a.active {
+    color: #007BFF;
+}
+
+nav ul li a.active::after {
+    background: #007BFF;
+    width: 100%;
+}
+
+/* Footer styling */
+footer {
+    background: #fff;
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0px -10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: auto; /* Pushes the footer to the bottom of the page */
+    width: 100%; /* Ensure it spans the full width */
+}
+
+/* Footer text styling */
+footer p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Social media links styling */
+.social-link {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.social-link:hover {
+    text-decoration: underline;
+}
+social-signup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.social-signup button {
+    background: #db4437; /* Google's brand color */
+}
